@@ -23,28 +23,13 @@ pretrained model and put in './pretrained/'.
 
 ## Usage
 
-Please change `logit_end_denom` in `train.py` for using the pc-softmax or the traditional-softmax. 
-This place is marked with comments `Switch these two`. 
-
-(From the original README)
-+ Convert dataset into '.tfrecord':
-```
-python convert_dataset.py --dataset_name=cub_200 --num_shards=10
-```
-+ Train (fine-tune) the model on 1 GPU:
-```
-CUDA_VISIBLE_DEVICES=0 ./train.sh
-```
-+ Evaluate the model on another GPU simultaneously:
-```
-CUDA_VISIBLE_DEVICES=1 ./eval.sh
-```
-+ Run Tensorboard for visualization:
-```
-tensorboard --logdir=./checkpoints/cub_200/ --port=6006
+Please refer to the bash files in './scripts'. For example, 
+to run with backbone VGG, without ADL, one can type: 
+```bash
+bash scripts/run_vgg_no_ADL.sh
 ```
 
-Training a model takes approximately 30 minutes with two 
+Training a model takes approximately 4 hours with two 
 Nvidia 2080 Ti GPUs. Since the pretrained models are huge, we will release the pretrained models in the
 form of Google Drive links imminently if the paper has been accepted. 
 Currently we do not provide those due for the sake of anonymous reviewing 

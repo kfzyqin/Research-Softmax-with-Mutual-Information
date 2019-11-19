@@ -1,32 +1,41 @@
-## ADL: Attention-based Dropout Layer for Weakly Supervised Object Localization
+# InfoCAM: Informative Class Activation Map (CUB-200-2011)
 
-Pytorch implementation of Attention-Dropout Layer for Weakly Supervised Object Localization (in progress)    
+**Acknowledgment: This repository is based on the implementation by:**
+[ADL: Attention-based Dropout Layer for Weakly Supervised Object Localization
+](https://github.com/junsukchoe/ADL/tree/master/Pytorch)\
+Junsuk Choe, Hyunjung Shim, CVPR 2018
 
-Our implementation is based on these repositories:
-- [Pytorch ImageNet Example](https://github.com/pytorch/examples/tree/master/imagenet)
+This repository contains implementation for infoCAM: Informative
+Class Activation Map. This is with the CUB-200-2011
+dataset. For more detailed information, please refer to the paper. 
 
-Imagenet Pre-trained model for ResNet-50 can be downloaded here:
-- [pytorch-resnet](https://github.com/ruotianluo/pytorch-resnet/)
+## Installation
 
-## Getting Started
-### Requirements
-- Python 3.3+
-- Python bindings for OpenCV.
-- Pytorch (≥ 1.1)
-- TensorboardX
-- OpenCV-python
+Please install all the necessary python packages, which is easy
+and intuitive if one uses a package management system like Conda.
 
-### Train & Test Examples
-- CUB-200-2011
+Please download the CUB-200-2011 dataset: 
+[CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html).
+Please unzip this file in '../CUB_200_2011'.
+
+Please download the pretrained [ResNet50](https://drive.google.com/open?id=0B7fNdx_jAqhtbllXbWxMVEdZclE)
+pretrained model and put in './pretrained/'. 
+
+## Usage
+
+Please refer to the bash files in './scripts'. For example, 
+to run with backbone VGG, without ADL, one can type: 
+```bash
+bash scripts/run_vgg_no_ADL.sh
 ```
-git clone https://github.com/junsukchoe/ADL.git
-cd ADL
-wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz
-tar -xvf CUB_200_2011.tgz
-cd Pytorch
-bash scripts/run1.sh
-```
 
-## Coming Soon
-* ImageNet implementation
-* Detailed instructions
+Training a model takes approximately 4 hours with two 
+Nvidia 2080 Ti GPUs. Since the pretrained models are huge, we will release the pretrained models in the
+form of Google Drive links imminently if the paper has been accepted. 
+Currently we do not provide those due for the sake of anonymous reviewing 
+purposes. 
+
+For more information, please refer to the original README file. 
+
+## License
+[CC-BY-4.0](https://choosealicense.com/licenses/cc-by-4.0/)
