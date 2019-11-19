@@ -9,30 +9,50 @@
 Neural Network Classifier as Mutual Information Estimator
 </h2>
 
-Foobar is a Python library for dealing with word pluralization.
+<p align="center">
+  <a href="#MI Estimator">MI Estimator</a> •
+  <a href="#PC Softmax">PC Softmax</a> •
+  <a href="#InfoCAM">InfoCAM</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-## Installation
+<p align="center">
+    <img width="500" height="auto" src="resources/info-CAM-Illustration.png" alt="InfoCAM" />
+</p>
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+## MI Estimator
+In the paper, we prove that classification neural networks that 
+optimise their weights to minimise the softmax cross-entropy are 
+equivalent to the ones that maximise mutual information between 
+inputs and labels with the balanced datasets. This repository 
+includes the implementation for evaluating the effectiveness of 
+classification mutual information estimator via synthetic 
+datasets. We also show the balanced dataset assumption can be 
+relaxed by modifying the traditional softmax to the 
+Probability-Correct (PC) softmax. This repository also contains 
+implementation for evaluating mutual information with PC-softmax
+on the synthetic dataset. 
 
-```bash
-pip install foobar
-```
+## PC Softmax
+We modify the traditional softmax to the 
+Probability-Correct (PC) softmax. This repository contains 
+implementation for demonstrating PC-softmax can improve a large
+margin than the traditional softmax for the average of the per-class 
+classification accuracy. We experiment on two datasets: MNIST and
+CUB-200-2011. In terms of the accuracy value, we achieve a new 
+state-of-art of the micro classification accuracy 
+(ours: 89.73; previous: 89.6) on CUB-200-2011. 
 
-## Usage
+## InfoCAM 
+We propose infoCAM: Informative Class Activation Map, which 
+highlights regions of the input image that are the most relevant to a 
+given label based on differences in information. The activation 
+map helps localise the target object in an image. We in this 
+repository show the effectiveness of the informative-theoretic 
+approach than the traditional CAM. 
 
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+<p align="center">
+    <img width="500" height="auto" src="resources/all-birds.png" alt="InfoCAM" />
+</p>
+   
