@@ -1,6 +1,9 @@
-<p align="center">
-    <img width="500" height="auto" src="resources/tai-chi.png" />
-</p>
+<h1 align="center">
+    <img width="300" height="auto" src="resources/tai-chi.png" />
+    <br>
+    Neural Network Classifier as Mutual Information Estimator
+    <br>
+</h1>
 
 Foobar is a Python library for dealing with word pluralization.
 
