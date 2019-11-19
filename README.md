@@ -22,7 +22,7 @@ Neural Network Classifier as Mutual Information Estimator
 </p>
 
 <p align="center">
-<strong>
+<strong align="center">
 In the paper, we show the connection between mutual information and softmax
 classifier through variational form of mutual information. The 
 connection explains the rational behind softmax cross-entropy from 
