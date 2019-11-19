@@ -21,6 +21,10 @@ Neural Network Classifier as Mutual Information Estimator
     <img width=100% height="auto" src="resources/Info-CAM-Illustration.png" alt="InfoCAM-Procedure" />
 </p>
 
+<h3 align="center">
+Overview
+</h3>
+
 <p align="center">
 <strong align="center">
 In the paper, we show the connection between mutual information and softmax
