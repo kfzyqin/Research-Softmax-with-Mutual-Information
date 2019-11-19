@@ -37,5 +37,8 @@ purposes.
 
 For more information, please refer to the original README file. 
 
+We also provide training and validating file lists for ImageNet if 
+one is interested in the very giant dataset. 
+
 ## License
 [CC-BY-4.0](https://choosealicense.com/licenses/cc-by-4.0/)
