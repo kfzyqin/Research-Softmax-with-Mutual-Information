@@ -1,7 +1,9 @@
 <h1 align="center">
-    <img width="300" height="auto" src="resources/tai-chi.png" />
+    <img width="250" height="auto" src="resources/tai-chi.png" />
     <br>
-    Neural Network Classifier as Mutual Information Estimator
+    Rethinking Softmax with Cross-Entropy: <br>
+    Neural Network Classifier as <br>
+    Mutual Information Estimator
     <br>
 </h1>
 
