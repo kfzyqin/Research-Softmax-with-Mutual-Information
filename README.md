@@ -1,11 +1,13 @@
 <h1 align="center">
     <img width="250" height="auto" src="resources/tai-chi.png" />
     <br>
-    Rethinking Softmax with Cross-Entropy: <br>
-    Neural Network Classifier <br> as <br>
-    Mutual Information Estimator
+    Rethinking Softmax with Cross-Entropy
     <br>
 </h1>
+
+<h2 align="center">
+Neural Network Classifier as Mutual Information Estimator
+</h2>
 
 Foobar is a Python library for dealing with word pluralization.
 
