@@ -12,25 +12,36 @@ dataset. For more detailed information, please refer to the paper.
 
 ## Installation
 
-Please refer to the original README file. 
+Please install all the necessary python packages, which is easy
+and intuitive if one uses a package management system like Conda.
+
+Please download the CUB-200-2011 dataset: 
+[CUB-200-2011](http://www.vision.caltech.edu/visipedia/CUB-200-2011.html). 
+Please unzip this file in './data/cub_200'. So the existing
+'train.txt' and 'val.txt' will split the CUB-200-2011 dataset into 
+the imbalanced training and test datasets. If you wish to use the 
+balanced CUB-200-2011, just replace 'train.txt' and 'val.txt' 
+with the 'train.txt' and 'val.txt' in the './data/cub_200/balanced'
+directory. 
+
+Please download the [Inception-V3](https://drive.google.com/open?id=1EUNR4o77lNt0fN5Bi4lKxTZnFhghILRw)
+pretrained model and put in './checkpoints/'. 
 
 ## Usage
 
-Please refer to the original README file. 
+Please refer to the bash files in './scripts'. For example, 
+to run with backbone VGG, without ADL, one can type: 
+```bash
+bash scripts/run_vgg_no_ADL.sh
+```
 
-The original splitting of the CUB-200-2011 dataset leads to a
-balanced one. We include data_splits for creating an imbalanced
-dataset. The files and tools are in the "data_splits" directory. 
-
-Please change `logit_end_denom` in `train.py` for using the pc-softmax or the traditional-softmax. 
-This place is marked with comments `Switch these two`. 
-
-Training a model takes approximately 30 minutes with two 
+Training a model takes approximately 4 hours with two 
 Nvidia 2080 Ti GPUs. Since the pretrained models are huge, we will release the pretrained models in the
 form of Google Drive links imminently if the paper has been accepted. 
 Currently we do not provide those due for the sake of anonymous reviewing 
 purposes. 
 
+For more information, please refer to the original README file. 
 
 ## License
 [CC-BY-4.0](https://choosealicense.com/licenses/cc-by-4.0/)
