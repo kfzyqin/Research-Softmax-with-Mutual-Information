@@ -10,8 +10,8 @@ Neural Network Classifier as Mutual Information Estimator
 </h2>
 
 <p align="center">
-  <a href="#MI Estimator">MI Estimator</a> •
-  <a href="#PC Softmax">PC Softmax</a> •
+  <a href="#mi-estimator">MI Estimator</a> •
+  <a href="#pc-softmax">PC Softmax</a> •
   <a href="#InfoCAM">InfoCAM</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
