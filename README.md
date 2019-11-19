@@ -18,7 +18,7 @@ Neural Network Classifier as Mutual Information Estimator
 </p>
 
 <p align="center">
-    <img width="500" height="auto" src="resources/info-CAM-Illustration.png" alt="InfoCAM" />
+    <img width=100% height="auto" src="resources/Info-CAM-Illustration.png" alt="InfoCAM-Procedure" />
 </p>
 
 ## MI Estimator
@@ -53,6 +53,6 @@ repository show the effectiveness of the informative-theoretic
 approach than the traditional CAM. 
 
 <p align="center">
-    <img width="500" height="auto" src="resources/all-birds.png" alt="InfoCAM" />
+    <img width=100% height="auto" src="resources/all-birds.png" alt="InfoCAM" />
 </p>
    
