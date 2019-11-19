@@ -2,7 +2,7 @@
     <img width="250" height="auto" src="resources/tai-chi.png" />
     <br>
     Rethinking Softmax with Cross-Entropy: <br>
-    Neural Network Classifier as <br>
+    Neural Network Classifier <br> as <br>
     Mutual Information Estimator
     <br>
 </h1>
