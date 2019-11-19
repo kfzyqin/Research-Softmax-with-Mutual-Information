@@ -24,4 +24,4 @@ def read_test_file(file_path):
 
 
 if __name__ == '__main__':
-    read_test_file('/home/zhenyue-qin/Research/Research-Sayaka/Sayaka-Folks/Folks-ADL/ADL/Pytorch/datalist/CUB/test.txt')
+    pass
