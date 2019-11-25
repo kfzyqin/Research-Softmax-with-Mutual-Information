@@ -14,7 +14,7 @@ Neural Network Classifier as Mutual Information Estimator
   <a href="#pc-softmax">PC Softmax</a> •
   <a href="#InfoCAM">InfoCAM</a> •
   <a href="#credits">Credits</a> •
-  <a href="#license">License</a>
+  <a href="#licence">Licence</a>
 </p>
 
 <p align="center">
