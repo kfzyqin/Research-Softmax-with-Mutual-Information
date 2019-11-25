@@ -41,10 +41,7 @@ difference between PMIs.
 
 <p align="center">
 <strong align="center">
-This repository includes all the experimental implementation. We will 
-also provide the giant pretrained models in the form of Google-Drive 
-links if the paper is accepted. We will not release them due to 
-the anonymous peer-review requirement. 
+This repository includes all the experimental implementation.
 </strong>
 </p>
 
