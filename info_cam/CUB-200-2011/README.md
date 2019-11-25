@@ -30,10 +30,7 @@ bash scripts/run_vgg_no_ADL.sh
 ```
 
 Training a model takes approximately 4 hours with two 
-Nvidia 2080 Ti GPUs. Since the pretrained models are huge, we will release the pretrained models in the
-form of Google Drive links imminently if the paper has been accepted. 
-Currently we do not provide those due for the sake of anonymous reviewing 
-purposes. 
+Nvidia 2080 Ti GPUs.
 
 For more information, please refer to the original README file. 
 
