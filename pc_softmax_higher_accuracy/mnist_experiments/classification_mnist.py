@@ -11,6 +11,7 @@ from dataset_tool import train_loader, test_loader
 # Softmax type can either be pc_softmax or trad_softmax
 softmax_type = 'pc_softmax'
 
+
 def get_label_proportions(a_dataloader):
     label_count_dict = {}
     rtn = []
@@ -24,12 +25,13 @@ def get_label_proportions(a_dataloader):
             else:
                 label_count_dict[a_target_item] += 1
 
-    print('label dict: ', label_count_dict)
     for a_key in label_count_dict.keys():
         label_count_dict[a_key] = label_count_dict[a_key] / data_all_len
 
     for a_key in sorted(label_count_dict.keys()):
         rtn.append(label_count_dict[a_key])
+    rtn[1] /= 100
+    print('rtn: ', rtn)
     return torch.tensor(rtn).to(device='cuda')
 
 

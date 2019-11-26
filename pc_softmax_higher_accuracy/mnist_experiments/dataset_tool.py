@@ -12,7 +12,7 @@ import numpy as np
 bch_sz = 64
 
 mnist_data = datasets.MNIST('.data',
-                            train=True, download=False,
+                            train=True, download=True,
                             transform=transforms.Compose([
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.1307,), (0.3081,))
@@ -64,8 +64,9 @@ def make_custom_dataset(a_dataset, tgt_labels, to_train=True):
     return my_dataset
 
 
-custom_train_dataset = make_custom_dataset(mnist_data, [0, 2, 4, 6, 8], to_train=True)
-custom_test_dataset = make_custom_dataset(mnist_data, [0, 2, 4, 6, 8], to_train=False)
+tgt_fewer_labels = [0, 2, 4, 6, 8]
+custom_train_dataset = make_custom_dataset(mnist_data, tgt_fewer_labels, to_train=True)
+custom_test_dataset = make_custom_dataset(mnist_data, tgt_fewer_labels, to_train=False)
 
 train_loader = DataLoader(custom_train_dataset, num_workers=1, batch_size=bch_sz, shuffle=True, drop_last=False,
                           pin_memory=True)
