@@ -9,9 +9,10 @@
 Neural Network Classifier as Mutual Information Estimator
 </h2>
 
+<div align="center">
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rethinking-softmax-with-cross-entropy-neural/fine-grained-image-classification-on)](https://paperswithcode.com/sota/fine-grained-image-classification-on?p=rethinking-softmax-with-cross-entropy-neural)
-
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rethinking-softmax-with-cross-entropy-neural/weakly-supervised-object-localization-on-tiny)](https://paperswithcode.com/sota/weakly-supervised-object-localization-on-tiny?p=rethinking-softmax-with-cross-entropy-neural)
+</div>
 
 <p align="center">
   <a href="#mi-estimator">MI Estimator</a> •
