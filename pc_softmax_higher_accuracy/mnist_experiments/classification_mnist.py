@@ -30,7 +30,6 @@ def get_label_proportions(a_dataloader):
 
     for a_key in sorted(label_count_dict.keys()):
         rtn.append(label_count_dict[a_key])
-    rtn[1] /= 100
     print('rtn: ', rtn)
     return torch.tensor(rtn).to(device='cuda')
 
