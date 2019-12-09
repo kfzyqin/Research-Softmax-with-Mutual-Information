@@ -20,6 +20,13 @@ Please change `softmax_type` in `classification_mnist.py` as `True`
 or `False` for using the pc-softmax or the traditional-softmax. 
 This place is marked with comments `Switch these two`. 
 
+Please change these lines in function `def make_custom_dataset(a_dataset, tgt_labels, to_train=True)`: 
+```python
+shorten_data_num = avg_data_num
+long_data_num = avg_data_num
+```
+to change the imbalance of the dataset. 
+
 We do not provide pretrained models since training can be done in 
 a minute. 
 
