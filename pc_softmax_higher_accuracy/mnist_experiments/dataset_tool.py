@@ -21,7 +21,11 @@ mnist_data = datasets.MNIST('.data',
 
 def make_custom_dataset(a_dataset, tgt_labels, to_train=True):
     avg_data_num = 3000
-    shorten_data_num = avg_data_num
+
+    # Change here to switch
+    shorten_data_num = avg_data_num / 10
+    # shorten_data_num = avg_data_num
+
     long_data_num = avg_data_num
 
     new_dataset = []
