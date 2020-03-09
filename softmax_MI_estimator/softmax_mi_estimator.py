@@ -33,9 +33,10 @@ pre_model = args.pre_model
 is_pc_softmax = args.pc_softmax
 
 data_bal = 'balanced'
-pre_model = 'pretrained_models/balanced_dataset/class_net_best_lat_10.ckpt'
-is_pc_softmax = True
-data_dim = 10
+# pre_model = 'pretrained_models/balanced_dataset/class_net_best_lat_10.ckpt'
+pre_model = '/media/zhenyue-qin/New Volume/Research/Research-Submissions/Submission-InfoCAM/Sayaka-InfoCAM/Research-Sayaka-InfoCAM/softmax_MI_estimator/class_net_best.ckpt'
+is_pc_softmax = False
+data_dim = 1
 
 if data_bal == 'balanced':
     tra_each_data_set_num = [10000, 10000, 10000, 10000, 10000]
@@ -44,11 +45,11 @@ elif data_bal == 'imbalanced':
 else:
     raise AssertionError
 
-assert data_bal in pre_model
+# assert data_bal in pre_model
 
 # Create distributions
 normal_dists = []
-mean_unit = 2
+mean_unit = 10
 normal_dists.append(torch.distributions.MultivariateNormal(torch.zeros(data_dim), torch.eye(data_dim)))
 for i in range(1, int(class_num / 2) + 1):
     normal_dists.append(torch.distributions.MultivariateNormal(torch.ones(data_dim) * i * mean_unit,
@@ -84,6 +85,8 @@ test_data = torch.cat(test_all_data, dim=0)
 in_tra_data = tra_data[:, :data_dim]
 tra_label = tra_data[:, data_dim:].long()
 
+tra_label = tra_label[torch.randperm(tra_label.shape[0])]
+
 in_test_data = test_data[:, :data_dim]
 test_label = test_data[:, data_dim:].long()
 
@@ -100,10 +103,10 @@ test_dataloader = DataLoader(test_dataset, num_workers=1, batch_size=bch_sz, shu
 class_net = ClassNet(data_dim, class_num, is_pc_softmax).to('cuda')
 criterion = nn.NLLLoss()
 
-class_net.load_state_dict(torch.load(pre_model))
+# class_net.load_state_dict(torch.load(pre_model))
 
-optimizer = optim.Adam(class_net.parameters(), lr=1e-6)
-
+# optimizer = optim.Adam(class_net.parameters(), lr=1e-4)
+optimizer = optim.SGD(class_net.parameters(), lr=5e-5)
 
 def test():
     correct = 0
@@ -126,7 +129,7 @@ def test():
 
 def train():
     max_accu = -1
-    epoch_num = 100
+    epoch_num = 150
     for epoch in range(1, epoch_num+1):
         correct = 0
         running_loss = 0.0
@@ -196,7 +199,7 @@ def evaluate():
     print('softmax: ', np.mean(softmax_list))
 
 
-# train()
+train()
 test()
 evaluate()
 

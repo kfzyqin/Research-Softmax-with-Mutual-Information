@@ -21,7 +21,7 @@ class ClassNet(nn.Module):
         x_in = torch.relu(self.fc3(x_in))
         x_in = self.fc4(x_in)
         if label_proportions is not None and self.to_emp_softmax:
-            x_in = torch.log(own_softmax(x_in, label_proportions) + 1e-6)
+            x_in = torch.log(own_softmax(x_in, label_proportions) + 1e-5)
         else:
             x_in = torch.log(F.softmax(x_in, dim=1) + 1e-6)
         return x_in
