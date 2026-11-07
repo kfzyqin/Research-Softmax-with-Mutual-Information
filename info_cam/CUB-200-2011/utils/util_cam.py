@@ -152,7 +152,7 @@ def generate_bbox(image, cam, gt_bbox, thr_val):
         _, contours, _ = cv2.findContours(thr_gray_heatmap,
                                           cv2.RETR_TREE,
                                           cv2.CHAIN_APPROX_SIMPLE)
-    except:
+    except ValueError:
         contours, _ = cv2.findContours(thr_gray_heatmap,
                                        cv2.RETR_TREE,
                                        cv2.CHAIN_APPROX_SIMPLE)
@@ -243,7 +243,7 @@ def get_bbox(image, cam, thresh, gt_box, image_name, save_dir='test', isSave=Fal
     try:
         _, contours, _ = \
             cv2.findContours(thred_gray_heatmap, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-    except:
+    except ValueError:
         contours, _ = \
             cv2.findContours(thred_gray_heatmap, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
